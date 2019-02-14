@@ -7,9 +7,9 @@ var q = url.parse(request.url,true);
 var filename = "." + q.pathname;
 fs.readFile(filename, function(err, data) {
 
-	if (request.url.match ('marist.jpg')){
+	if (request.url.match ('pikachu.jpeg')){
 
-		var img = fs.readFilesSync('marist.jpg');
+		var img = fs.readFilesSync('pikachu.jpeg');
 		response.writeHead(200, {'Content-Type' : 'image/jpg' });
 		return response.end(img, 'binary');
 };
